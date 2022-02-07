@@ -1,0 +1,122 @@
+body{
+    margin: 0px;
+}
+
+header{
+    padding-top: 70px;
+}
+
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    border: 1px solid #333;
+    padding: 10px;
+    width: 180px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: auto;
+}
+.title:hover{
+    background-color: #333;
+    color: white;
+    transition: 0.3s;
+}
+
+
+/* Content --------- */
+
+
+.all{
+    background-color: #f2f2f2;
+    width: 80%;
+    padding: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 10px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.image-control{
+    width: 50px;
+    height: auto;
+}
+
+.image-control-middle{
+    width: 50px;
+    height: auto;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.pochette{
+    display: block;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.pochette-paused{
+    width: 80%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.controls{
+    display:flex;
+    margin-top: 70px;
+    justify-content: center;
+    background-color: rgb(45, 45, 45);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.right{
+    margin-left: 100px;
+    height: 500px;
+}
+
+.titre{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    color: #333;
+}
+
+.more{
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+}
+
+
+
+
+
+/* Animations ---------------- */
+
+@keyframes zoom{
+    0%{
+        width: 80%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes dezoom{
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 80%;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sonos App</title>
+    <link rel="stylesheet" href="style/index.css" />
+</head>
+<body>
+
+<header>
+    <h1 class="title">Sonos App</h1>
+</header>
+
+<script>
+
+
+    function playing(){
+        let element = document.getElementById("pochette");
+        element.style.animation = "0.5s zoom";
+    }
+
+    function pause(){
+        let element = document.getElementById("pochette");
+        element.style.animation = "0.5s dezoom";
+    }
+
+</script>
+
+<div class="all">
+
+        <div class="left">
+
+
+            <% 
+                if(state == "playing"){
+                    %>
+                        <img src="<%= play.albumArtURI %>" class="pochette" id="pochette" />
+                    <%
+                }
+                else if(state == "paused"){
+                    %>
+                        <img src="<%= play.albumArtURI %>" class="pochette-paused" id="pochette" />
+                    <%
+                }
+            
+            
+            %> 
+
+            
+
+        </div>
+
+        <div class="right">
+
+            <h1 class="titre"><%= play.title %></h1>
+            <h1 class="more"><%= play.artist %> - <%= play.album %></h1>
+
+
+
+            <div class="controls">
+                <% 
+                    if(state == 'playing'){
+                        %>
+
+                            <a href="/previous"><img src="images/previous.png" class="image-control" /></a>
+                            <a href="/pause"><img src="images/pause.png" class="image-control-middle" /></a>
+                            <a href="/next"><img src="images/next.png" class="image-control" /></a>
+
+                            <script>
+
+                                playing();
+
+                            </script>
+
+                        <%
+                    }
+                    else if(state == "paused"){
+                        %>
+                        <a href="/previous"><img src="images/previous.png" class="image-control" /></a>
+                        <a href="/play"><img src="images/play.png" class="image-control-middle" /></a>
+                        <a href="/next"><img src="images/next.png" class="image-control" /></a>
+
+                        <script>
+
+                            pause();
+
+                        </script>
+
+                        <%
+                    }
+                    else{
+                        %>
+                            <p class="nothing">Aucune lecture !</p>
+                        <%
+                    }
+                %> 
+                
+            </div>
+
+        </div>
+
+</div>
+
+
+
+
+    
+</body>
+</html>
